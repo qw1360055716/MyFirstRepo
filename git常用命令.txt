@@ -1,0 +1,48 @@
+﻿##GIT 工作区 本地仓库 远程仓库
+
+git clone http://10.7.10.54/csxbank/dmp/dss.git  ##拷贝工程到当前目录下
+
+
+可以新建一个空文件夹，将项目拷贝至该文件夹下面
+git clone 地址 文件夹
+
+git branch -a ##查看所有分支
+
+git checkout -b tb-test-dev##新建分支并切换到分支
+
+git checkout tb-test-dev ##切换分支
+
+git pull origin test
+##取回远程主机某个分支的更新，再与本地的指定分支合并。
+
+git status ##查看本地仓库状态
+
+##提交之前一定要进行对比，只提交需要提交的文件，每日完成的最好当天提交
+
+git add 文件名    ##将文件内容添加到索引(将修改添加到暂存区)
+
+git commit -m "测试提交" ##将暂存区文件提交到本地仓库
+
+新建远程分支
+git push origin newbranch
+删除本地分支
+ git branch -d origin/newbranch
+删除远程分支
+ git push origin --delete origin/newbranch
+
+
+origin是远程仓库默认的别名
+git push origin tb-test-dev ##将本地仓库内容推到远程仓库,一定不要强推代码到远程仓库(force push),有冲突需要解决冲突
+
+
+#拉取指定分支
+git clone -b tb-test-dev git@10.7.10.54:csxbank/dmp/tds.git
+
+ 
+git log  查看提交记录 q 退出
+
+git branch -vv 查看本地分支与远程分支的对应关系
+
+git stash    将修改内容暂时保存
+
+git revert  文件名  将修改的文件还原
